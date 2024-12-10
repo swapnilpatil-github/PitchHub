@@ -1,0 +1,152 @@
+/*@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+@layer utilities {
+  .border-border {
+    border-color: var(--border, #E5E7EB); 
+  }
+}
+
+/* 
+:root {
+  --dark-blue: #17153B;
+  --purple: #2E236C;
+  --muted-blue: #433D8B;
+  --light-lavender: #C8ACD6;
+  --white: #FFFFFF;
+  --border: #E5E7EB; /* Default border color
+   
+}
+*/
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--light-lavender);
+  color: var(--dark-blue);
+  line-height: 1.6;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  color: var(--dark-blue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
+a:hover {
+  color: var(--muted-blue);
+}
+/*
+/* 
+.dark {
+  --background: #0E0E0E;
+  --foreground: #F8F9FA;
+  --border: #3B3B3B;
+}
+/*
+@layer base {
+  * {
+    @apply border-border; 
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} 
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Utilities */
+@layer utilities {
+  .border-border {
+    border-color: var(--border, #E5E7EB); /* Default border color */
+  }
+  .card {
+    @apply rounded-lg shadow-md p-6 bg-white;
+  }
+  .btn {
+    @apply text-white bg-purple px-4 py-2 rounded-md transition hover:bg-muted-blue;
+  }
+}
+
+/* Global Styles */
+:root {
+  --dark-blue: #0F172A; /* Inspired by Tailwind's slate-900 */
+  --purple: #6366F1; /* Inspired by Tailwind's indigo-500 */
+  --muted-blue: #4F46E5; /* Tailwind's indigo-600 */
+  --light-lavender: #F3F4F6; /* Tailwind's cool-gray-100 */
+  --white: #FFFFFF;
+  --border: #D1D5DB; /* Tailwind's cool-gray-300 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-lavender);
+  color: var(--dark-blue);
+  line-height: 1.8;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* Add spacing between elements */
+}
+
+h1, h2 {
+  color: var(--dark-blue);
+  font-weight: 700; /* Bold headings */
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple);
+  font-weight: 500; /* Slightly bold for emphasis */
+}
+
+a:hover {
+  color: var(--muted-blue);
+  text-decoration: underline;
+}
+
+/* Dark mode customization */
+.dark {
+  --background: #0E0E0E;
+  --foreground: #F8F9FA;
+  --border: #3B3B3B;
+}
+
+@layer base {
+  * {
+    @apply border-border; /* Apply your custom border class */
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
