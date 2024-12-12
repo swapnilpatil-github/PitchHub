@@ -2,6 +2,9 @@ import mongoose from "mongoose";
 
 const StartupSchema = new mongoose.Schema(
   {
+    author : {
+      type:String
+    },
     title: {
       type: String,
       required: true,
@@ -18,15 +21,7 @@ const StartupSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    // imgURL: {
-    //   type: String,
-    //   validate: {
-    //     validator: function (value) {
-    //       return /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|png|gif|svg)$/.test(value);
-    //     },
-    //     message: "Please provide a valid image URL.",
-    //   },
-    // },
+    
     imgURL: {
       type: String,
       validate: {

@@ -26,6 +26,7 @@
 
 import Navbar from "./components/Navbar";
 import SessionProviderWrapper from "./components/SessionProviderWrapper";
+import Footer from "./components/Footer";
 import "./globals.css";
 
 export const metadata = {
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
           <main className="flex flex-col items-center justify-center min-h-screen px-6 sm:px-12 py-8">
             {children}
           </main>
+          <Footer />
         </SessionProviderWrapper>
       </body>
     </html>

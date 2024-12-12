@@ -22,6 +22,7 @@ export async function POST(request) {
     const {title,description,category,pitchArticle,imgURL} =await request.json()
     // const userEmail = session.user.email;
     const userEmail = token.email
+    const author = token.name
     if(!title || !description || !category || !pitchArticle || !imgURL){
       return NextResponse.json({
         message: "Please fill All the fields" ,
@@ -30,6 +31,7 @@ export async function POST(request) {
     }
 
     const newPitch = new StartupModel({
+      author,
       title,
       description,
       category,

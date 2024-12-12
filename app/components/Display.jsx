@@ -10,10 +10,12 @@ const Display = () => {
   const [pitches, setPitches] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
+  
 
   const fetchData = async () => {
     try {
       const response = await axios.get("/api/pitches");
+      
       const data = response?.data?.data;
       if (data) {
         setPitches(data);
